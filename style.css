@@ -1,0 +1,3515 @@
+/* =========================================================
+   TAJWID AI-VISUAL
+   PREMIUM ISLAMIC LEARNING WEB APP
+   SMP IT NURUL AQLAM
+   STYLE.CSS — COMPLETE VERSION
+========================================================= */
+
+
+/* =========================================================
+   01. ROOT VARIABLES
+========================================================= */
+
+:root {
+
+    --primary: #087f5b;
+    --primary-dark: #056447;
+    --primary-deep: #034d3b;
+    --primary-light: #10b981;
+    --primary-lighter: #34d399;
+    --primary-soft: #e8f7f1;
+
+    --gold: #d4a72c;
+    --gold-dark: #b88918;
+    --gold-light: #f5d77a;
+    --gold-soft: #fff8df;
+
+    --blue: #2563eb;
+    --blue-soft: #eff6ff;
+
+    --purple: #7c3aed;
+    --purple-soft: #f5f3ff;
+
+    --orange: #ea580c;
+    --orange-soft: #fff7ed;
+
+    --red: #dc2626;
+    --red-soft: #fef2f2;
+
+    --success: #059669;
+    --success-soft: #ecfdf5;
+
+    --bg: #f4f8f6;
+    --surface: #ffffff;
+    --surface-soft: #f8fbfa;
+    --surface-muted: #f1f5f3;
+
+    --text: #17211d;
+    --text-secondary: #5f6f68;
+    --text-muted: #8b9993;
+
+    --border: #e2ebe7;
+    --border-strong: #cfddd7;
+
+    --sidebar-width: 270px;
+    --topbar-height: 78px;
+
+    --radius-xs: 8px;
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 22px;
+    --radius-xl: 30px;
+
+    --shadow-xs:
+        0 2px 8px rgba(15, 81, 62, 0.04);
+
+    --shadow-sm:
+        0 5px 18px rgba(15, 81, 62, 0.07);
+
+    --shadow-md:
+        0 10px 30px rgba(15, 81, 62, 0.10);
+
+    --shadow-lg:
+        0 20px 50px rgba(15, 81, 62, 0.14);
+
+    --shadow-xl:
+        0 30px 70px rgba(15, 81, 62, 0.18);
+
+    --transition:
+        all 0.25s ease;
+
+    --transition-slow:
+        all 0.45s ease;
+}
+
+
+/* =========================================================
+   02. DARK MODE VARIABLES
+========================================================= */
+
+body.dark-mode {
+
+    --bg: #0a1411;
+
+    --surface: #12211b;
+
+    --surface-soft: #162820;
+
+    --surface-muted: #1b3028;
+
+    --text: #f1f7f4;
+
+    --text-secondary: #b5c5be;
+
+    --text-muted: #83948c;
+
+    --border: #263a32;
+
+    --border-strong: #345047;
+
+    --primary-soft: #12382c;
+
+    --gold-soft: #3a3219;
+
+    --blue-soft: #172c4e;
+
+    --purple-soft: #29203f;
+
+    --orange-soft: #3d2618;
+
+    --red-soft: #3b1b1b;
+
+    --success-soft: #10382c;
+
+    --shadow-xs:
+        0 2px 8px rgba(0,0,0,0.18);
+
+    --shadow-sm:
+        0 5px 18px rgba(0,0,0,0.20);
+
+    --shadow-md:
+        0 10px 30px rgba(0,0,0,0.25);
+
+    --shadow-lg:
+        0 20px 50px rgba(0,0,0,0.35);
+
+    --shadow-xl:
+        0 30px 70px rgba(0,0,0,0.45);
+}
+
+
+/* =========================================================
+   03. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family:
+        "Inter",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+button:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+    outline:
+        3px solid
+        rgba(16,185,129,0.25);
+
+    outline-offset: 2px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   04. APP
+========================================================= */
+
+.app {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   05. SIDEBAR
+========================================================= */
+
+.sidebar {
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: var(--sidebar-width);
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 10%,
+            rgba(255,255,255,0.07),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            180deg,
+            #075e46 0%,
+            #064f3d 50%,
+            #043f31 100%
+        );
+
+    color: #ffffff;
+
+    z-index: 1000;
+
+    box-shadow:
+        8px 0 30px rgba(0,0,0,0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   06. BRAND
+========================================================= */
+
+.brand {
+
+    min-height: 100px;
+
+    padding: 22px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.10);
+}
+
+.brand-logo {
+
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold),
+            var(--gold-light)
+        );
+
+    color: #143d2f;
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,0,0,0.15);
+}
+
+.brand-text h2 {
+
+    font-size: 19px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    letter-spacing: -0.3px;
+}
+
+.brand-text span {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color:
+        rgba(255,255,255,0.68);
+
+    font-size: 11px;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   07. SIDEBAR MENU
+========================================================= */
+
+.sidebar-menu {
+
+    padding: 22px 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    overflow-y: auto;
+}
+
+.nav-item {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 12px 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    border-radius: 13px;
+
+    background: transparent;
+
+    color:
+        rgba(255,255,255,0.72);
+
+    text-align: left;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.nav-item:hover {
+
+    background:
+        rgba(255,255,255,0.10);
+
+    color: #ffffff;
+
+    transform:
+        translateX(3px);
+}
+
+.nav-item.active {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.18),
+            rgba(255,255,255,0.07)
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        inset 3px 0 0 var(--gold);
+}
+
+.nav-icon {
+
+    width: 25px;
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   08. SIDEBAR BOTTOM
+========================================================= */
+
+.sidebar-bottom {
+
+    margin-top: auto;
+
+    padding: 16px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.10);
+}
+
+.sidebar-setting {
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    color:
+        rgba(255,255,255,0.82);
+
+    font-size: 13px;
+
+    transition: var(--transition);
+}
+
+.sidebar-setting:hover {
+
+    background:
+        rgba(255,255,255,0.14);
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   09. SIDEBAR OVERLAY
+========================================================= */
+
+.sidebar-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0,0,0,0.45);
+
+    backdrop-filter:
+        blur(3px);
+
+    z-index: 999;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition: var(--transition);
+}
+
+.sidebar-overlay.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   10. MAIN CONTENT
+========================================================= */
+
+.main-content {
+
+    width:
+        calc(100% - var(--sidebar-width));
+
+    margin-left:
+        var(--sidebar-width);
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: var(--transition);
+}
+
+
+/* =========================================================
+   11. TOPBAR
+========================================================= */
+
+.topbar {
+
+    position: sticky;
+
+    top: 0;
+
+    height: var(--topbar-height);
+
+    padding: 0 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        rgba(255,255,255,0.92);
+
+    border-bottom:
+        1px solid var(--border);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    z-index: 900;
+}
+
+body.dark-mode .topbar {
+
+    background:
+        rgba(18,33,27,0.92);
+}
+
+.topbar-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.menu-button {
+
+    width: 42px;
+    height: 42px;
+
+    display: none;
+
+    place-items: center;
+
+    border-radius: 12px;
+
+    background:
+        var(--primary-soft);
+
+    color:
+        var(--primary);
+
+    font-size: 20px;
+}
+
+.topbar-title h1 {
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+.topbar-title p {
+
+    margin-top: 2px;
+
+    color:
+        var(--text-muted);
+
+    font-size: 12px;
+}
+
+.student-profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+.student-avatar {
+
+    width: 43px;
+    height: 43px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-soft),
+            #d8f4ea
+        );
+
+    font-size: 22px;
+}
+
+.student-info strong {
+
+    display: block;
+
+    font-size: 13px;
+}
+
+.student-info span {
+
+    display: block;
+
+    color:
+        var(--text-muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   12. CONTENT
+========================================================= */
+
+.content {
+
+    width: 100%;
+
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding: 32px;
+}
+
+
+/* =========================================================
+   13. PAGE
+========================================================= */
+
+.page {
+
+    display: none;
+
+    animation:
+        pageIn 0.35s ease;
+}
+
+.page.active {
+
+    display: block;
+}
+
+@keyframes pageIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   14. HERO
+========================================================= */
+
+.hero-card {
+
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 42px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.4fr 0.6fr;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    border-radius:
+        var(--radius-xl);
+
+    background:
+
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(255,255,255,0.15),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 20% 90%,
+            rgba(212,167,44,0.12),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #075e46,
+            #087f5b 55%,
+            #0a9168
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        var(--shadow-lg);
+}
+
+.hero-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    right: -100px;
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.14);
+}
+
+.hero-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    left: -80px;
+    top: -80px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+}
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.hero-badge {
+
+    display: inline-flex;
+
+    padding: 7px 13px;
+
+    margin-bottom: 16px;
+
+    border-radius: 100px;
+
+    background:
+        rgba(255,255,255,0.13);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    color:
+        #f7e8a6;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.hero-content h2 {
+
+    max-width: 700px;
+
+    font-size:
+        clamp(30px,4vw,48px);
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+.hero-content h2 span {
+
+    display: block;
+
+    color:
+        var(--gold-light);
+}
+
+.hero-content p {
+
+    max-width: 690px;
+
+    margin-top: 18px;
+
+    color:
+        rgba(255,255,255,0.76);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   15. PREMIUM QURAN HERO
+========================================================= */
+
+.hero-quran {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 25px 20px;
+
+    z-index: 2;
+}
+
+.quran-circle {
+
+    position: relative;
+
+    width: 118px;
+    height: 118px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-bottom: 16px;
+
+    border-radius: 50%;
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size: 4rem;
+
+    line-height: 1;
+
+    color:
+        var(--gold-light);
+
+    background:
+
+        radial-gradient(
+            circle at 35% 30%,
+            rgba(255,255,255,0.18),
+            rgba(255,255,255,0.04) 65%
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.30);
+
+    box-shadow:
+
+        0 0 0 10px
+        rgba(255,255,255,0.025),
+
+        0 0 0 20px
+        rgba(255,255,255,0.015),
+
+        0 18px 40px
+        rgba(0,0,0,0.15),
+
+        inset 0 1px 0
+        rgba(255,255,255,0.25);
+
+    animation:
+        quranGlow 4s ease-in-out infinite;
+}
+
+.quran-circle::before,
+.quran-circle::after {
+
+    content: "";
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.quran-circle::before {
+
+    inset: -8px;
+
+    border:
+        1px solid
+        rgba(245,215,122,0.25);
+}
+
+.quran-circle::after {
+
+    inset: -16px;
+
+    border:
+        1px dashed
+        rgba(255,255,255,0.10);
+}
+
+
+/* =========================================================
+   16. ARABIC TYPOGRAPHY
+========================================================= */
+
+.arabic-text,
+.arabic,
+.quran-arabic,
+.materi-arabic,
+.arabic-example {
+
+    font-family:
+
+        "Amiri",
+        "Scheherazade New",
+        "Noto Naskh Arabic",
+        "Traditional Arabic",
+        serif;
+
+    direction: rtl;
+
+    unicode-bidi: plaintext;
+
+    text-align: center;
+
+    font-feature-settings:
+        "liga" 1,
+        "calt" 1;
+
+    font-variant-ligatures:
+        common-ligatures;
+
+    text-rendering:
+        optimizeLegibility;
+
+    -webkit-font-smoothing:
+        antialiased;
+}
+
+
+/* =========================================================
+   17. HERO ARABIC
+========================================================= */
+
+.arabic-text {
+
+    position: relative;
+
+    max-width: 620px;
+
+    margin: 8px auto 5px;
+
+    padding: 4px 8px;
+
+    font-size:
+        clamp(
+            1.65rem,
+            2.5vw,
+            2.45rem
+        );
+
+    font-weight: 700;
+
+    line-height: 2.05;
+
+    letter-spacing: 0;
+
+    color:
+        #fffdf2;
+
+    text-shadow:
+
+        0 3px 12px
+        rgba(0,0,0,0.25),
+
+        0 1px 2px
+        rgba(0,0,0,0.20);
+}
+
+.arabic-text::after {
+
+    content: "";
+
+    display: block;
+
+    width: 90px;
+
+    height: 2px;
+
+    margin:
+        10px auto 0;
+
+    border-radius: 50px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold-light),
+            transparent
+        );
+
+    opacity: 0.7;
+}
+
+.hero-quran small {
+
+    display: block;
+
+    max-width: 430px;
+
+    margin-top: 8px;
+
+    color:
+        rgba(255,255,255,0.72);
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    font-style: italic;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   18. BUTTONS
+========================================================= */
+
+.primary-btn {
+
+    margin-top: 22px;
+
+    min-height: 46px;
+
+    padding: 11px 18px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    border-radius: 12px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--gold),
+            #e8bd4b
+        );
+
+    color:
+        #17392d;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,0,0,0.12);
+
+    transition:
+        var(--transition);
+}
+
+.primary-btn:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(0,0,0,0.16);
+}
+
+.secondary-btn {
+
+    min-height: 44px;
+
+    padding: 10px 16px;
+
+    border-radius: 11px;
+
+    background:
+        var(--primary-soft);
+
+    color:
+        var(--primary);
+
+    font-weight: 700;
+
+    transition:
+        var(--transition);
+}
+
+.secondary-btn:hover {
+
+    background:
+        var(--primary);
+
+    color:
+        #ffffff;
+}
+
+.suno-btn {
+
+    min-height: 44px;
+
+    padding: 10px 16px;
+
+    border-radius: 11px;
+
+    background:
+        #111827;
+
+    color:
+        #ffffff;
+
+    font-weight: 700;
+
+    transition:
+        var(--transition);
+}
+
+.suno-btn:hover {
+
+    transform:
+        translateY(-2px);
+
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   19. STATISTICS
+========================================================= */
+
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 16px;
+
+    margin-top: 22px;
+}
+
+.stat-card {
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-md);
+
+    background:
+        var(--surface);
+
+    box-shadow:
+        var(--shadow-sm);
+
+    transition:
+        var(--transition);
+}
+
+.stat-card:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        var(--shadow-md);
+}
+
+.stat-icon {
+
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 14px;
+
+    font-size: 22px;
+}
+
+.stat-icon.green {
+    background:
+        var(--primary-soft);
+}
+
+.stat-icon.gold {
+    background:
+        var(--gold-soft);
+}
+
+.stat-icon.blue {
+    background:
+        var(--blue-soft);
+}
+
+.stat-icon.purple {
+    background:
+        var(--purple-soft);
+}
+
+.stat-card span {
+
+    display: block;
+
+    color:
+        var(--text-muted);
+
+    font-size: 11px;
+}
+
+.stat-card strong {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 21px;
+}
+
+
+/* =========================================================
+   20. SECTION TITLE
+========================================================= */
+
+.section-title,
+.page-header {
+
+    margin-top: 38px;
+
+    margin-bottom: 20px;
+}
+
+.section-title > div > span,
+.page-header > span {
+
+    color:
+        var(--primary);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.section-title h2,
+.page-header h2 {
+
+    margin-top: 5px;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.3px;
+}
+
+.page-header p {
+
+    max-width: 700px;
+
+    margin-top: 7px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   21. FEATURE GRID
+========================================================= */
+
+.feature-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 18px;
+}
+
+.feature-card {
+
+    min-height: 230px;
+
+    padding: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    text-align: left;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-lg);
+
+    background:
+        var(--surface);
+
+    color:
+        var(--text);
+
+    box-shadow:
+        var(--shadow-sm);
+
+    transition:
+        var(--transition);
+}
+
+.feature-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(8,127,91,0.25);
+
+    box-shadow:
+        var(--shadow-md);
+}
+
+.feature-icon {
+
+    width: 52px;
+    height: 52px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 15px;
+
+    background:
+        var(--primary-soft);
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+
+    font-size: 16px;
+
+    font-weight: 800;
+}
+
+.feature-card p {
+
+    margin-top: 8px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+.feature-link {
+
+    margin-top: auto;
+
+    padding-top: 18px;
+
+    color:
+        var(--primary);
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   22. LEARNING TARGET
+========================================================= */
+
+.learning-card {
+
+    margin-top: 22px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-lg);
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--surface),
+            var(--primary-soft)
+        );
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+.learning-card > div:first-child {
+
+    max-width: 750px;
+}
+
+.learning-card span {
+
+    color:
+        var(--primary);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.learning-card h3 {
+
+    margin-top: 5px;
+
+    font-size: 18px;
+}
+
+.learning-card p {
+
+    margin-top: 7px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 12px;
+}
+
+.progress-circle {
+
+    width: 110px;
+    height: 110px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            var(--surface) 58%,
+            transparent 60%
+        );
+
+    border:
+        8px solid
+        var(--primary-light);
+
+    box-shadow:
+        0 0 0 5px
+        var(--primary-soft);
+}
+
+.progress-circle strong {
+
+    font-size: 20px;
+}
+
+.progress-circle span {
+
+    font-size: 9px;
+
+    letter-spacing: 0;
+}
+
+
+/* =========================================================
+   23. SECTION BADGE
+========================================================= */
+
+.section-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 6px 10px;
+
+    border-radius: 100px;
+
+    background:
+        var(--primary-soft);
+
+    color:
+        var(--primary);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   24. CONTENT PLACEHOLDER
+========================================================= */
+
+.content-placeholder {
+
+    min-height: 380px;
+
+    padding: 45px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border:
+        1px dashed var(--border);
+
+    border-radius:
+        var(--radius-lg);
+
+    background:
+        var(--surface);
+}
+
+.placeholder-icon {
+
+    width: 75px;
+    height: 75px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 22px;
+
+    background:
+        var(--primary-soft);
+
+    font-size: 35px;
+
+    margin-bottom: 18px;
+}
+
+.content-placeholder h3 {
+
+    font-size: 20px;
+}
+
+.content-placeholder p {
+
+    max-width: 500px;
+
+    margin-top: 8px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   25. CARD
+========================================================= */
+
+.card {
+
+    padding: 25px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-lg);
+
+    background:
+        var(--surface);
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+/* =========================================================
+   26. SINGING
+========================================================= */
+
+.singing-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px,0.8fr)
+        minmax(400px,1.2fr);
+
+    gap: 20px;
+}
+
+.card-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 24px;
+}
+
+.card-heading .feature-icon {
+
+    margin-bottom: 0;
+}
+
+.card-heading h2 {
+
+    font-size: 19px;
+}
+
+.card-heading p {
+
+    margin-top: 3px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   27. FORM
+========================================================= */
+
+.form-group {
+
+    margin-bottom: 17px;
+}
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.form-group select,
+.form-group input {
+
+    width: 100%;
+
+    min-height: 46px;
+
+    padding: 10px 13px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 11px;
+
+    background:
+        var(--surface-soft);
+
+    color:
+        var(--text);
+
+    cursor: pointer;
+
+    transition:
+        var(--transition);
+}
+
+.form-group select:hover,
+.form-group input:hover {
+
+    border-color:
+        var(--border-strong);
+}
+
+.form-group select:focus,
+.form-group input:focus {
+
+    border-color:
+        var(--primary);
+}
+
+.singing-generate-btn {
+
+    width: 100%;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   28. SINGING RESULT
+========================================================= */
+
+.result-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+.result-header h2 {
+
+    margin-top: 7px;
+
+    font-size: 19px;
+}
+
+.ai-status {
+
+    padding: 6px 10px;
+
+    border-radius: 100px;
+
+    background:
+        var(--primary-soft);
+
+    color:
+        var(--success);
+
+    font-size: 9px;
+
+    font-weight: 800;
+}
+
+.lyrics-output {
+
+    width: 100%;
+
+    min-height: 330px;
+
+    padding: 18px;
+
+    resize: vertical;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 14px;
+
+    background:
+        var(--surface-soft);
+
+    color:
+        var(--text);
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    transition:
+        var(--transition);
+}
+
+.lyrics-output:focus {
+
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(8,127,91,0.08);
+
+    outline: none;
+}
+
+.lyrics-output::placeholder {
+
+    color:
+        var(--text-muted);
+}
+
+.lyrics-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 14px;
+}
+
+.copy-status {
+
+    min-height: 20px;
+
+    margin-top: 8px;
+
+    color:
+        var(--success);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   29. TEACHER GUIDE
+========================================================= */
+
+.teacher-guide {
+
+    margin-top: 22px;
+
+    display: flex;
+
+    gap: 18px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--surface),
+            var(--gold-soft)
+        );
+}
+
+.teacher-guide-icon {
+
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 15px;
+
+    background:
+        var(--gold-soft);
+
+    font-size: 25px;
+}
+
+.teacher-guide h2 {
+
+    font-size: 18px;
+}
+
+.teacher-guide p {
+
+    margin-top: 5px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 12px;
+}
+
+.teacher-guide ol {
+
+    margin-top: 12px;
+
+    padding-left: 20px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 12px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   30. MATERI
+========================================================= */
+
+#materiGrid {
+
+    grid-template-columns:
+        repeat(3,1fr);
+}
+
+#materiGrid .feature-card {
+
+    min-height: 210px;
+}
+
+#materiDetail {
+
+    margin-top: 22px;
+}
+
+
+/* =========================================================
+   31. MATERI DETAIL
+========================================================= */
+
+.materi-detail-card {
+
+    padding: 30px;
+
+    border-radius:
+        var(--radius-lg);
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    box-shadow:
+        var(--shadow-md);
+}
+
+.materi-detail-card h2 {
+
+    font-size: 26px;
+
+    margin-bottom: 12px;
+}
+
+.materi-detail-card h3 {
+
+    margin-top: 25px;
+
+    margin-bottom: 8px;
+
+    color:
+        var(--primary);
+
+    font-size: 18px;
+}
+
+.materi-detail-card p {
+
+    color:
+        var(--text-secondary);
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+.materi-detail-card ul,
+.materi-detail-card ol {
+
+    margin:
+        10px 0 10px 22px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   32. MATERI ARABIC
+========================================================= */
+
+.materi-arabic {
+
+    position: relative;
+
+    margin: 20px 0;
+
+    padding: 25px 20px;
+
+    overflow: hidden;
+
+    font-size:
+        clamp(
+            1.7rem,
+            3vw,
+            2.35rem
+        );
+
+    font-weight: 700;
+
+    line-height: 2.1;
+
+    direction: rtl;
+
+    text-align: center;
+
+    color:
+        #075e46;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,255,255,0.9),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ecfdf5,
+            #f6fffb
+        );
+
+    border:
+        1px solid
+        rgba(8,127,91,0.14);
+
+    border-radius:
+        var(--radius-lg);
+
+    box-shadow:
+        0 8px 25px
+        rgba(6,95,70,0.07);
+}
+
+.materi-arabic::before {
+
+    content: "۞";
+
+    position: absolute;
+
+    left: 18px;
+
+    top: 12px;
+
+    color:
+        var(--gold);
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size: 20px;
+
+    opacity: 0.65;
+}
+
+.materi-arabic::after {
+
+    content: "۞";
+
+    position: absolute;
+
+    right: 18px;
+
+    top: 12px;
+
+    color:
+        var(--gold);
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size: 20px;
+
+    opacity: 0.65;
+}
+
+
+/* =========================================================
+   33. ARABIC EXAMPLE
+========================================================= */
+
+.arabic-example {
+
+    margin: 18px 0;
+
+    padding: 22px;
+
+    border-radius:
+        var(--radius-md);
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--primary-soft),
+            var(--surface-soft)
+        );
+
+    border:
+        1px solid var(--border);
+
+    color:
+        var(--primary-dark);
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    line-height: 2;
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+/* =========================================================
+   34. DARK MODE ARABIC
+========================================================= */
+
+body.dark-mode .materi-arabic {
+
+    color:
+        #d1fae5;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(16,185,129,0.08),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            rgba(6,95,70,0.48),
+            rgba(4,63,45,0.38)
+        );
+
+    border-color:
+        rgba(52,211,153,0.18);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.18);
+}
+
+body.dark-mode .arabic-example {
+
+    color:
+        #d1fae5;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(6,95,70,0.45),
+            rgba(18,33,27,0.8)
+        );
+
+    border-color:
+        rgba(52,211,153,0.18);
+}
+
+
+/* =========================================================
+   35. FOOTER
+========================================================= */
+
+.footer {
+
+    margin-top: auto;
+
+    padding: 22px 32px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border-top:
+        1px solid var(--border);
+
+    color:
+        var(--text-muted);
+
+    font-size: 11px;
+
+    background:
+        var(--surface);
+}
+
+.footer strong {
+
+    color:
+        var(--primary);
+}
+
+
+/* =========================================================
+   36. SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+
+    width: 7px;
+
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+
+    background:
+        transparent;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background:
+        #b6c8c1;
+
+    border-radius:
+        20px;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+
+    background:
+        #355048;
+}
+
+
+/* =========================================================
+   37. ANIMATIONS
+========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+@keyframes quranGlow {
+
+    0%,
+    100% {
+
+        box-shadow:
+
+            0 0 0 10px
+            rgba(255,255,255,0.025),
+
+            0 0 0 20px
+            rgba(255,255,255,0.015),
+
+            0 18px 40px
+            rgba(0,0,0,0.15),
+
+            inset 0 1px 0
+            rgba(255,255,255,0.25);
+    }
+
+    50% {
+
+        box-shadow:
+
+            0 0 0 10px
+            rgba(245,215,122,0.035),
+
+            0 0 0 20px
+            rgba(255,255,255,0.018),
+
+            0 20px 45px
+            rgba(0,0,0,0.18),
+
+            inset 0 1px 0
+            rgba(255,255,255,0.30);
+    }
+}
+
+.hero-card,
+.stat-card,
+.feature-card,
+.learning-card {
+
+    animation:
+        fadeUp 0.45s ease both;
+}
+
+
+/* =========================================================
+   38. UTILITY
+========================================================= */
+
+.hidden {
+
+    display:
+        none !important;
+}
+
+.text-center {
+
+    text-align:
+        center;
+}
+
+.text-primary {
+
+    color:
+        var(--primary);
+}
+
+.text-gold {
+
+    color:
+        var(--gold);
+}
+
+
+/* =========================================================
+   39. RESPONSIVE — 1200px
+========================================================= */
+
+@media (max-width:1200px) {
+
+    :root {
+
+        --sidebar-width:
+            235px;
+    }
+
+    .content {
+
+        padding:
+            25px;
+    }
+
+    .feature-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    #materiGrid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .stats-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .hero-card {
+
+        grid-template-columns:
+            1fr 0.5fr;
+    }
+}
+
+
+/* =========================================================
+   40. RESPONSIVE — 900px
+========================================================= */
+
+@media (max-width:900px) {
+
+    :root {
+
+        --sidebar-width:
+            250px;
+    }
+
+    .sidebar {
+
+        transform:
+            translateX(-100%);
+
+        box-shadow:
+            10px 0 40px
+            rgba(0,0,0,0.20);
+    }
+
+    .sidebar.open {
+
+        transform:
+            translateX(0);
+    }
+
+    .main-content {
+
+        width:
+            100%;
+
+        margin-left:
+            0;
+    }
+
+    .menu-button {
+
+        display:
+            grid;
+    }
+
+    .topbar {
+
+        padding:
+            0 20px;
+    }
+
+    .hero-card {
+
+        grid-template-columns:
+            1fr;
+
+        padding:
+            32px;
+    }
+
+    .hero-quran {
+
+        margin-top:
+            20px;
+    }
+
+    .singing-layout {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .quran-circle {
+
+        width:
+            100px;
+
+        height:
+            100px;
+
+        font-size:
+            3.4rem;
+    }
+
+    .arabic-text {
+
+        font-size:
+            2rem;
+    }
+}
+
+
+/* =========================================================
+   41. RESPONSIVE — 768px
+========================================================= */
+
+@media (max-width:768px) {
+
+    .content {
+
+        padding:
+            22px 18px;
+    }
+
+    .hero-card {
+
+        border-radius:
+            24px;
+    }
+
+    .stats-grid {
+
+        gap:
+            12px;
+    }
+
+    .feature-grid {
+
+        gap:
+            14px;
+    }
+
+    .materi-arabic {
+
+        font-size:
+            1.8rem;
+
+        line-height:
+            2;
+    }
+
+    .arabic-example {
+
+        font-size:
+            1.75rem;
+    }
+}
+
+
+/* =========================================================
+   42. RESPONSIVE — 650px
+========================================================= */
+
+@media (max-width:650px) {
+
+    :root {
+
+        --topbar-height:
+            70px;
+    }
+
+    .topbar {
+
+        padding:
+            0 14px;
+    }
+
+    .topbar-title h1 {
+
+        font-size:
+            16px;
+    }
+
+    .topbar-title p {
+
+        display:
+            none;
+    }
+
+    .student-info {
+
+        display:
+            none;
+    }
+
+    .student-avatar {
+
+        width:
+            39px;
+
+        height:
+            39px;
+    }
+
+    .content {
+
+        padding:
+            17px 14px;
+    }
+
+    .hero-card {
+
+        padding:
+            25px;
+
+        min-height:
+            auto;
+
+        border-radius:
+            21px;
+    }
+
+    .hero-content h2 {
+
+        font-size:
+            30px;
+
+        letter-spacing:
+            -0.5px;
+    }
+
+    .hero-content p {
+
+        font-size:
+            12px;
+    }
+
+    .hero-quran {
+
+        padding:
+            20px 10px;
+    }
+
+    .quran-circle {
+
+        width:
+            78px;
+
+        height:
+            78px;
+
+        font-size:
+            2.7rem;
+
+        margin-bottom:
+            12px;
+    }
+
+    .quran-circle::before {
+
+        inset:
+            -6px;
+    }
+
+    .quran-circle::after {
+
+        inset:
+            -12px;
+    }
+
+    .arabic-text {
+
+        font-size:
+            1.65rem;
+
+        line-height:
+            1.95;
+
+        max-width:
+            100%;
+    }
+
+    .hero-quran small {
+
+        font-size:
+            10px;
+    }
+
+    .stats-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:
+            10px;
+    }
+
+    .stat-card {
+
+        padding:
+            14px;
+
+        gap:
+            9px;
+    }
+
+    .stat-icon {
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        font-size:
+            18px;
+    }
+
+    .stat-card strong {
+
+        font-size:
+            17px;
+    }
+
+    .feature-grid,
+    #materiGrid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .feature-card {
+
+        min-height:
+            auto;
+
+        padding:
+            20px;
+    }
+
+    .learning-card {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+    }
+
+    .progress-circle {
+
+        align-self:
+            center;
+    }
+
+    .section-title,
+    .page-header {
+
+        margin-top:
+            28px;
+    }
+
+    .section-title h2,
+    .page-header h2 {
+
+        font-size:
+            21px;
+    }
+
+    .card {
+
+        padding:
+            18px;
+    }
+
+    .singing-layout {
+
+        gap:
+            14px;
+    }
+
+    .lyrics-output {
+
+        min-height:
+            280px;
+    }
+
+    .lyrics-actions {
+
+        flex-direction:
+            column;
+    }
+
+    .lyrics-actions button {
+
+        width:
+            100%;
+    }
+
+    .teacher-guide {
+
+        flex-direction:
+            column;
+    }
+
+    .materi-detail-card {
+
+        padding:
+            20px;
+    }
+
+    .materi-detail-card h2 {
+
+        font-size:
+            22px;
+    }
+
+    .materi-arabic {
+
+        padding:
+            20px 15px;
+
+        font-size:
+            1.65rem;
+
+        line-height:
+            2;
+    }
+
+    .arabic-example {
+
+        font-size:
+            1.6rem;
+    }
+
+    .footer {
+
+        padding:
+            18px 14px;
+
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+    }
+}
+
+
+/* =========================================================
+   43. RESPONSIVE — 480px
+========================================================= */
+
+@media (max-width:480px) {
+
+    .brand {
+
+        padding-left:
+            15px;
+
+        padding-right:
+            15px;
+    }
+
+    .brand-logo {
+
+        width:
+            46px;
+
+        height:
+            46px;
+
+        font-size:
+            30px;
+    }
+
+    .brand-text h2 {
+
+        font-size:
+            17px;
+    }
+
+    .hero-content h2 {
+
+        font-size:
+            27px;
+    }
+
+    .hero-content p {
+
+        font-size:
+            11px;
+
+        line-height:
+            1.7;
+    }
+
+    .arabic-text {
+
+        font-size:
+            1.5rem;
+
+        line-height:
+            1.9;
+    }
+
+    .quran-circle {
+
+        width:
+            68px;
+
+        height:
+            68px;
+
+        font-size:
+            2.35rem;
+    }
+
+    .materi-arabic {
+
+        font-size:
+            1.5rem;
+
+        padding:
+            18px 12px;
+    }
+
+    .arabic-example {
+
+        font-size:
+            1.45rem;
+
+        padding:
+            18px 12px;
+    }
+
+    .primary-btn {
+
+        width:
+            100%;
+    }
+}
+
+
+/* =========================================================
+   44. RESPONSIVE — 400px
+========================================================= */
+
+@media (max-width:400px) {
+
+    .stats-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .stat-card {
+
+        width:
+            100%;
+    }
+
+    .hero-card {
+
+        padding:
+            22px;
+    }
+
+    .hero-content h2 {
+
+        font-size:
+            25px;
+    }
+
+    .topbar-title h1 {
+
+        font-size:
+            15px;
+    }
+}
+
+
+/* =========================================================
+   45. MOBILE SIDEBAR SAFETY
+========================================================= */
+
+@media (max-width:900px) {
+
+    body.sidebar-open {
+
+        overflow:
+            hidden;
+    }
+}
+
+
+/* =========================================================
+   46. PRINT
+========================================================= */
+
+@media print {
+
+    .sidebar,
+    .topbar,
+    .footer,
+    .menu-button,
+    .sidebar-overlay {
+
+        display:
+            none !important;
+    }
+
+    .main-content {
+
+        width:
+            100%;
+
+        margin:
+            0;
+    }
+
+    .content {
+
+        padding:
+            0;
+    }
+
+    .page {
+
+        display:
+            block !important;
+    }
+
+    .hero-card {
+
+        box-shadow:
+            none;
+    }
+}
+/* =========================================================
+   ARABIC QURAN STYLE
+========================================================= */
+
+.arabic-title-box {
+    margin: 24px 0 30px;
+    padding: 30px 24px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(16, 185, 129, 0.12),
+            transparent 65%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.98),
+            rgba(240,253,250,0.95)
+        );
+
+    border: 1px solid rgba(16, 185, 129, 0.18);
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 12px 30px rgba(6, 95, 70, 0.08);
+}
+
+
+/* ---------------------------------------------------------
+   JUDUL ARAB
+--------------------------------------------------------- */
+
+.arabic-main-title {
+
+    font-family:
+        "Amiri",
+        "Noto Naskh Arabic",
+        serif;
+
+    font-size: clamp(
+        2rem,
+        4vw,
+        3.3rem
+    );
+
+    font-weight: 700;
+
+    line-height: 2;
+
+    direction: rtl;
+
+    text-align: center;
+
+    color: #064e3b;
+
+    letter-spacing: 0;
+
+    text-rendering: optimizeLegibility;
+
+    font-feature-settings:
+        "liga",
+        "calt";
+
+}
+
+
+/* ---------------------------------------------------------
+   TEKS AYAT
+--------------------------------------------------------- */
+
+.arabic-example {
+
+    font-family:
+        "Amiri",
+        "Noto Naskh Arabic",
+        serif;
+
+    font-size: clamp(
+        2rem,
+        4vw,
+        3.1rem
+    );
+
+    line-height: 2.2;
+
+    font-weight: 400;
+
+    direction: rtl;
+
+    text-align: center;
+
+    color: #111827;
+
+    padding: 18px 12px;
+
+    font-feature-settings:
+        "liga",
+        "calt";
+
+    text-rendering:
+        optimizeLegibility;
+
+}
+
+
+/* ---------------------------------------------------------
+   CONTAINER AYAT
+--------------------------------------------------------- */
+
+.arabic-example-box {
+
+    position: relative;
+
+    margin-bottom: 20px;
+
+    padding: 22px 20px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f8fafc
+        );
+
+    border:
+        1px solid
+        rgba(6, 95, 70, 0.12);
+
+    box-shadow:
+        0 8px 24px
+        rgba(15, 23, 42, 0.06);
+
+    overflow: hidden;
+
+}
+
+
+.arabic-example-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #047857,
+            #10b981,
+            #d4af37
+        );
+
+}
+
+
+/* ---------------------------------------------------------
+   TERJEMAHAN / KETERANGAN
+--------------------------------------------------------- */
+
+.arabic-example-box p {
+
+    margin-top: 12px;
+
+    padding-top: 12px;
+
+    border-top:
+        1px dashed
+        rgba(6, 95, 70, 0.18);
+
+    text-align: center;
+
+    color: #475569;
+
+    font-size: 0.95rem;
+
+}
+
+
+/* ---------------------------------------------------------
+   ARABIC EXPLANATION
+--------------------------------------------------------- */
+
+.arabic-explanation-box {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(6, 95, 70, 0.04),
+            rgba(212, 175, 55, 0.05)
+        );
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+}
+
+
+.arabic-explanation {
+
+    font-family:
+        "Amiri",
+        "Noto Naskh Arabic",
+        serif;
+
+    font-size: 1.8rem;
+
+    line-height: 2;
+
+    direction: rtl;
+
+    text-align: center;
+
+    color: #065f46;
+
+}
+
+
+/* ---------------------------------------------------------
+   HURUF TAJWID
+--------------------------------------------------------- */
+
+.tajwid-arabic-small {
+
+    font-family:
+        "Amiri",
+        "Noto Naskh Arabic",
+        serif;
+
+    font-size: 2rem;
+
+    line-height: 1.8;
+
+    direction: rtl;
+
+    color: #064e3b;
+
+    margin: 8px 0;
+
+}
+
+
+/* =========================================================
+   WARNA TAJWID
+========================================================= */
+
+.tajwid-izhhar {
+    color: #2563eb;
+    font-weight: 700;
+}
+
+.tajwid-idgham {
+    color: #059669;
+    font-weight: 700;
+}
+
+.tajwid-iqlab {
+    color: #dc2626;
+    font-weight: 700;
+}
+
+.tajwid-ikhfa {
+    color: #d97706;
+    font-weight: 700;
+}
+
+.tajwid-mad {
+    color: #7c3aed;
+    font-weight: 700;
+}
+
+.tajwid-qalqalah {
+    color: #0891b2;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark-mode .arabic-title-box {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(6, 78, 59, 0.35),
+            rgba(15, 23, 42, 0.8)
+        );
+
+    border-color:
+        rgba(52, 211, 153, 0.18);
+
+}
+
+
+body.dark-mode .arabic-main-title {
+
+    color: #6ee7b7;
+
+}
+
+
+body.dark-mode .arabic-example-box {
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #172033
+        );
+
+    border-color:
+        rgba(110, 231, 183, 0.12);
+
+}
+
+
+body.dark-mode .arabic-example {
+
+    color: #f8fafc;
+
+}
+
+
+body.dark-mode .arabic-example-box p {
+
+    color: #cbd5e1;
+
+}
+
+
+body.dark-mode .arabic-explanation {
+
+    color: #6ee7b7;
+
+}
+
+
+/* =========================================================
+   END OF STYLE.CSS
+   TAJWID AI-VISUAL
+========================================================= */

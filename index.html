@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Tajwid AI-Visual — Media Pembelajaran Tajwid Berbasis AI-Visual dengan Metode Mnemonic Singing untuk Kelas VII SMP IT Nurul Aqlam."
+    >
+
+    <meta
+        name="theme-color"
+        content="#087f5b"
+    >
+
+    <title>Tajwid AI-Visual | SMP IT Nurul Aqlam</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS UTAMA -->
+    <link rel="stylesheet" href="./style.css">
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     APP CONTAINER
+========================================================= -->
+
+<div class="app">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                ت
+            </div>
+
+            <div class="brand-text">
+
+                <h2>
+                    Tajwid AI
+                </h2>
+
+                <span>
+                    AI-Visual Learning
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav
+            class="sidebar-menu"
+            aria-label="Navigasi utama"
+        >
+
+
+            <button
+                type="button"
+                class="nav-item active"
+                data-page="dashboard"
+            >
+
+                <span class="nav-icon">
+                    🏠
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="nav-item"
+                data-page="materi"
+            >
+
+                <span class="nav-icon">
+                    📚
+                </span>
+
+                <span>
+                    Materi Tajwid
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="nav-item"
+                data-page="visual"
+            >
+
+                <span class="nav-icon">
+                    🎨
+                </span>
+
+                <span>
+                    AI-Visual
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="nav-item"
+                data-page="singing"
+            >
+
+                <span class="nav-icon">
+                    🎵
+                </span>
+
+                <span>
+                    Mnemonic Singing
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="nav-item"
+                data-page="ai"
+            >
+
+                <span class="nav-icon">
+                    🤖
+                </span>
+
+                <span>
+                    Belajar Bersama AI
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="nav-item"
+                data-page="latihan"
+            >
+
+                <span class="nav-icon">
+                    🧠
+                </span>
+
+                <span>
+                    Latihan
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="nav-item"
+                data-page="evaluasi"
+            >
+
+                <span class="nav-icon">
+                    📊
+                </span>
+
+                <span>
+                    Evaluasi
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="nav-item"
+                data-page="progress"
+            >
+
+                <span class="nav-icon">
+                    📈
+                </span>
+
+                <span>
+                    Progress Belajar
+                </span>
+
+            </button>
+
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <button
+                type="button"
+                class="sidebar-setting"
+                id="darkModeBtn"
+            >
+
+                <span>
+                    🌙
+                </span>
+
+                <span>
+                    Mode Gelap
+                </span>
+
+            </button>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="topbar-left">
+
+
+                <button
+                    type="button"
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Buka menu"
+                >
+
+                    ☰
+
+                </button>
+
+
+                <div class="topbar-title">
+
+                    <h1 id="pageTitle">
+                        Dashboard
+                    </h1>
+
+                    <p>
+                        Media Pembelajaran Tajwid Kelas VII
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- STUDENT PROFILE -->
+
+            <div class="student-profile">
+
+
+                <div class="student-avatar">
+                    👨‍🎓
+                </div>
+
+
+                <div class="student-info">
+
+                    <strong>
+                        Siswa Kelas VII
+                    </strong>
+
+                    <span>
+                        SMP IT Nurul Aqlam
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <div class="content">
+
+
+            <!-- =================================================
+                 DASHBOARD
+            ================================================== -->
+
+            <section
+                id="dashboard"
+                class="page active"
+            >
+
+
+                <!-- HERO -->
+
+                <div class="hero-card">
+
+
+                    <div class="hero-content">
+
+
+                        <div class="hero-badge">
+                            ✦ MEDIA PEMBELAJARAN TAJWID
+                        </div>
+
+
+                        <h2>
+
+                            Belajar Tajwid
+
+                            <span>
+                                Lebih Mudah & Menyenangkan
+                            </span>
+
+                        </h2>
+
+
+                        <p>
+
+                            Media pembelajaran berbasis
+                            AI-Visual dengan metode
+                            Mnemonic Singing untuk membantu
+                            siswa kelas VII memahami dan
+                            menerapkan ilmu Tajwid dalam
+                            membaca Al-Qur'an.
+
+                        </p>
+
+
+                        <button
+                            type="button"
+                            class="primary-btn"
+                            data-page="materi"
+                        >
+
+                            📚 Mulai Belajar
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <div class="hero-quran">
+
+
+                        <div class="quran-circle">
+                            اقْرَأْ
+                        </div>
+
+
+                        <div class="arabic-text">
+
+                            وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا
+
+                        </div>
+
+
+                        <small>
+
+                            "Dan bacalah Al-Qur'an dengan tartil."
+
+                        </small>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     STATISTICS
+                ================================================== -->
+
+                <div class="stats-grid">
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green">
+                            📚
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Materi
+                            </span>
+
+                            <strong>
+                                12
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon gold">
+                            🎵
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Mnemonic
+                            </span>
+
+                            <strong>
+                                Aktif
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon blue">
+                            🤖
+                        </div>
+
+                        <div>
+
+                            <span>
+                                AI Tutor
+                            </span>
+
+                            <strong>
+                                Siap
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon purple">
+                            📈
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Progress
+                            </span>
+
+                            <strong id="dashboardProgress">
+                                0%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     FEATURE
+                ================================================== -->
+
+                <div class="section-title">
+
+                    <div>
+
+                        <span>
+                            FITUR UTAMA
+                        </span>
+
+                        <h2>
+                            Belajar dengan Berbagai Cara
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="feature-grid">
+
+
+                    <!-- MATERI -->
+
+                    <button
+                        type="button"
+                        class="feature-card"
+                        data-page="materi"
+                    >
+
+                        <div class="feature-icon">
+                            📖
+                        </div>
+
+                        <h3>
+                            Materi Tajwid
+                        </h3>
+
+                        <p>
+
+                            Pelajari konsep Tajwid,
+                            huruf, hukum bacaan,
+                            contoh, dan penerapannya
+                            dalam Al-Qur'an.
+
+                        </p>
+
+                        <span class="feature-link">
+                            Pelajari →
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- AI VISUAL -->
+
+                    <button
+                        type="button"
+                        class="feature-card"
+                        data-page="visual"
+                    >
+
+                        <div class="feature-icon">
+                            🎨
+                        </div>
+
+                        <h3>
+                            AI-Visual
+                        </h3>
+
+                        <p>
+
+                            Pahami konsep Tajwid
+                            melalui visual yang
+                            menarik dan mudah
+                            dipahami siswa.
+
+                        </p>
+
+                        <span class="feature-link">
+                            Buka AI-Visual →
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- MNEMONIC -->
+
+                    <button
+                        type="button"
+                        class="feature-card"
+                        data-page="singing"
+                    >
+
+                        <div class="feature-icon">
+                            🎵
+                        </div>
+
+                        <h3>
+                            Mnemonic Singing
+                        </h3>
+
+                        <p>
+
+                            Mengingat konsep Tajwid
+                            melalui lirik, irama,
+                            dan lagu pembelajaran.
+
+                        </p>
+
+                        <span class="feature-link">
+                            Mulai Bernyanyi →
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- AI -->
+
+                    <button
+                        type="button"
+                        class="feature-card"
+                        data-page="ai"
+                    >
+
+                        <div class="feature-icon">
+                            🤖
+                        </div>
+
+                        <h3>
+                            Belajar Bersama AI
+                        </h3>
+
+                        <p>
+
+                            Bertanya dan berdiskusi
+                            tentang Tajwid dengan
+                            asisten pembelajaran AI.
+
+                        </p>
+
+                        <span class="feature-link">
+                            Tanya AI →
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TARGET
+                ================================================== -->
+
+                <div class="learning-card">
+
+
+                    <div>
+
+                        <span>
+                            TARGET PEMBELAJARAN
+                        </span>
+
+                        <h3>
+                            Meningkatkan Kualitas Bacaan Al-Qur'an
+                        </h3>
+
+                        <p>
+
+                            Pahami hukum Tajwid,
+                            kenali pola bacaan,
+                            dengarkan contoh,
+                            hafalkan melalui mnemonic,
+                            kemudian praktikkan dalam
+                            membaca Al-Qur'an.
+
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="progress-circle"
+                        id="progressCircle"
+                    >
+
+                        <strong>
+                            0%
+                        </strong>
+
+                        <span>
+                            Progress
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MATERI
+            ================================================== -->
+
+            <section
+                id="materi"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+                    <span>
+                        MATERI PEMBELAJARAN
+                    </span>
+
+                    <h2>
+                        Materi Tajwid Kelas VII
+                    </h2>
+
+                    <p>
+
+                        Pelajari ilmu Tajwid melalui
+                        materi, contoh bacaan, visual,
+                        mnemonic, dan latihan interaktif.
+
+                    </p>
+
+
+                </div>
+
+
+                <div
+                    id="materiGrid"
+                    class="feature-grid"
+                >
+
+                    <!--
+                        Materi akan dibuat otomatis
+                        oleh data/materi.js dan app.js.
+                    -->
+
+                </div>
+
+
+                <div
+                    id="materiDetail"
+                    class="materi-detail"
+                    style="display: none;"
+                ></div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 AI VISUAL
+            ================================================== -->
+
+            <section
+                id="visual"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+                    <span>
+                        PEMBELAJARAN VISUAL
+                    </span>
+
+                    <h2>
+                        🎨 AI-Visual Tajwid
+                    </h2>
+
+                    <p>
+
+                        Visualisasi konsep Tajwid
+                        agar siswa lebih mudah
+                        memahami dan mengingat materi.
+
+                    </p>
+
+                </div>
+
+
+                <div class="content-placeholder">
+
+
+                    <div class="placeholder-icon">
+                        🎨
+                    </div>
+
+
+                    <h3>
+                        AI-Visual Learning
+                    </h3>
+
+
+                    <p>
+
+                        Modul AI-Visual sedang
+                        kita kembangkan.
+
+                    </p>
+
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        data-page="materi"
+                    >
+
+                        📚 Pelajari Materi Dahulu
+
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MNEMONIC SINGING
+            ================================================== -->
+
+            <section
+                id="singing"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+
+                    <span class="section-badge">
+                        🎵 METODE MNEMONIC SINGING
+                    </span>
+
+
+                    <h2>
+                        Mnemonic Singing
+                    </h2>
+
+
+                    <p>
+
+                        Mengingat konsep Tajwid
+                        melalui lirik, irama,
+                        dan lagu pembelajaran.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="singing-layout">
+
+
+                    <!-- CONTROL -->
+
+                    <div class="singing-control card">
+
+
+                        <div class="card-heading">
+
+
+                            <div class="feature-icon">
+                                🎵
+                            </div>
+
+
+                            <div>
+
+                                <h2>
+                                    Generator Lirik
+                                </h2>
+
+                                <p>
+
+                                    Buat lirik lagu berdasarkan
+                                    materi Tajwid.
+
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- MATERI -->
+
+                        <div class="form-group">
+
+
+                            <label for="singingMateri">
+
+                                📚 Pilih Materi
+
+                            </label>
+
+
+                            <select id="singingMateri">
+
+                                <option value="nunTanwin">
+                                    Hukum Nun Sukun & Tanwin
+                                </option>
+
+                                <option value="mimSukun">
+                                    Hukum Mim Sukun
+                                </option>
+
+                                <option value="mad">
+                                    Hukum Mad
+                                </option>
+
+                                <option value="qalqalah">
+                                    Qalqalah
+                                </option>
+
+                                <option value="lam">
+                                    Lam Jalalah
+                                </option>
+
+                                <option value="ra">
+                                    Tafkhim dan Tarqiq Ra
+                                </option>
+
+                            </select>
+
+
+                        </div>
+
+
+
+                        <!-- GAYA -->
+
+                        <div class="form-group">
+
+
+                            <label for="singingStyle">
+
+                                🎼 Gaya Lagu
+
+                            </label>
+
+
+                            <select id="singingStyle">
+
+                                <option value="ceria">
+                                    Ceria & Mudah Dihafal
+                                </option>
+
+                                <option value="islami">
+                                    Islami & Edukatif
+                                </option>
+
+                                <option value="anak">
+                                    Lagu Anak Sekolah
+                                </option>
+
+                                <option value="nasyid">
+                                    Nasyid Modern
+                                </option>
+
+                            </select>
+
+
+                        </div>
+
+
+
+                        <!-- TARGET -->
+
+                        <div class="form-group">
+
+
+                            <label for="singingTarget">
+
+                                👨‍🎓 Sasaran
+
+                            </label>
+
+
+                            <select id="singingTarget">
+
+                                <option value="kelas7">
+                                    Siswa Kelas VII SMP
+                                </option>
+
+                            </select>
+
+
+                        </div>
+
+
+
+                        <!-- GENERATE -->
+
+                        <button
+                            type="button"
+                            id="generateLyricsBtn"
+                            class="primary-btn singing-generate-btn"
+                        >
+
+                            ✨ Buat Lirik Mnemonic
+
+                        </button>
+
+
+                    </div>
+
+
+
+                    <!-- RESULT -->
+
+                    <div class="singing-result card">
+
+
+                        <div class="result-header">
+
+
+                            <div>
+
+                                <span class="section-badge">
+                                    HASIL GENERATOR
+                                </span>
+
+
+                                <h2 id="lyricsTitle">
+                                    Lirik Mnemonic Singing
+                                </h2>
+
+                            </div>
+
+
+                            <span class="ai-status">
+                                ● SIAP
+                            </span>
+
+
+                        </div>
+
+
+
+                        <textarea
+                            id="lyricsOutput"
+                            class="lyrics-output"
+                            placeholder="Lirik mnemonic akan muncul di sini..."
+                            spellcheck="false"
+                        ></textarea>
+
+
+
+                        <div class="lyrics-actions">
+
+
+                            <button
+                                type="button"
+                                id="copyLyricsBtn"
+                                class="secondary-btn"
+                            >
+
+                                📋 Salin Lirik
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                id="openSunoBtn"
+                                class="suno-btn"
+                            >
+
+                                🎵 Buka Suno
+
+                            </button>
+
+
+                        </div>
+
+
+
+                        <div
+                            id="copyStatus"
+                            class="copy-status"
+                        ></div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- PANDUAN GURU -->
+
+                <div class="teacher-guide card">
+
+
+                    <div class="teacher-guide-icon">
+                        👨‍🏫
+                    </div>
+
+
+                    <div>
+
+
+                        <h2>
+                            Panduan Guru
+                        </h2>
+
+
+                        <p>
+
+                            Guru tetap menjadi pembimbing
+                            utama dalam penggunaan media
+                            pembelajaran.
+
+                        </p>
+
+
+                        <ol>
+
+                            <li>
+                                Pilih materi Tajwid.
+                            </li>
+
+                            <li>
+                                Pilih gaya lagu.
+                            </li>
+
+                            <li>
+                                Klik
+                                <strong>
+                                    "Buat Lirik Mnemonic"
+                                </strong>.
+                            </li>
+
+                            <li>
+                                Periksa kembali
+                                ketepatan isi lirik.
+                            </li>
+
+                            <li>
+                                Klik
+                                <strong>
+                                    "Salin Lirik"
+                                </strong>.
+                            </li>
+
+                            <li>
+                                Klik
+                                <strong>
+                                    "Buka Suno"
+                                </strong>.
+                            </li>
+
+                            <li>
+                                Masukkan lirik ke Suno
+                                untuk membuat lagu.
+                            </li>
+
+                            <li>
+                                Gunakan lagu sebagai
+                                penguatan hafalan Tajwid.
+                            </li>
+
+                        </ol>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 BELAJAR BERSAMA AI
+            ================================================== -->
+
+            <section
+                id="ai"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+                    <span>
+                        ASISTEN PEMBELAJARAN
+                    </span>
+
+                    <h2>
+                        🤖 Belajar Bersama AI
+                    </h2>
+
+                    <p>
+                        Tanya jawab interaktif
+                        mengenai materi Tajwid.
+                    </p>
+
+                </div>
+
+
+                <div class="content-placeholder">
+
+
+                    <div class="placeholder-icon">
+                        🤖
+                    </div>
+
+
+                    <h3>
+                        AI Tajwid Tutor
+                    </h3>
+
+
+                    <p>
+
+                        Fitur AI Tutor akan
+                        kita hubungkan pada
+                        tahap pengembangan berikutnya.
+
+                    </p>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 LATIHAN
+            ================================================== -->
+
+            <section
+                id="latihan"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+                    <span>
+                        LATIHAN
+                    </span>
+
+                    <h2>
+                        🧠 Latihan Tajwid
+                    </h2>
+
+                    <p>
+                        Uji pemahaman melalui
+                        soal-soal interaktif.
+                    </p>
+
+                </div>
+
+
+                <div class="content-placeholder">
+
+
+                    <div class="placeholder-icon">
+                        🧠
+                    </div>
+
+
+                    <h3>
+                        Latihan Interaktif
+                    </h3>
+
+
+                    <p>
+
+                        Bank soal dan sistem
+                        penilaian akan kita
+                        kembangkan berikutnya.
+
+                    </p>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 EVALUASI
+            ================================================== -->
+
+            <section
+                id="evaluasi"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+                    <span>
+                        EVALUASI
+                    </span>
+
+                    <h2>
+                        📊 Evaluasi Pembelajaran
+                    </h2>
+
+                    <p>
+
+                        Pantau hasil belajar
+                        dan perkembangan
+                        kemampuan siswa.
+
+                    </p>
+
+                </div>
+
+
+                <div class="content-placeholder">
+
+
+                    <div class="placeholder-icon">
+                        📊
+                    </div>
+
+
+                    <h3>
+                        Evaluasi Pembelajaran
+                    </h3>
+
+
+                    <p>
+
+                        Pre-test, post-test,
+                        nilai, dan analisis
+                        hasil belajar akan
+                        ditambahkan berikutnya.
+
+                    </p>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROGRESS
+            ================================================== -->
+
+            <section
+                id="progress"
+                class="page"
+            >
+
+
+                <div class="page-header">
+
+                    <span>
+                        PERKEMBANGAN BELAJAR
+                    </span>
+
+                    <h2>
+                        📈 Progress Belajar
+                    </h2>
+
+                    <p>
+
+                        Pantau perjalanan
+                        pembelajaran Tajwid.
+
+                    </p>
+
+                </div>
+
+
+                <div class="content-placeholder">
+
+
+                    <div class="placeholder-icon">
+                        📈
+                    </div>
+
+
+                    <h3>
+                        Progress Siswa
+                    </h3>
+
+
+                    <p>
+
+                        Progress materi,
+                        latihan, dan evaluasi
+                        akan tersimpan otomatis.
+
+                    </p>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+
+        <footer class="footer">
+
+
+            <div>
+
+                <strong>
+                    Tajwid AI-Visual
+                </strong>
+
+                — Media Pembelajaran Tajwid
+
+            </div>
+
+
+            <div>
+                SMP IT Nurul Aqlam © 2026
+            </div>
+
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+     
+     PENTING:
+     Struktur folder yang disarankan:
+
+     tajwid-ai/
+     │
+     ├── index.html
+     ├── style.css
+     ├── app.js
+     │
+     └── data/
+         └── materi.js
+========================================================= -->
+
+<!-- JAVASCRIPT -->
+<script src="./data/materi.js"></script>
+<script src="./app.js"></script>
+
+</body>
+</html>
